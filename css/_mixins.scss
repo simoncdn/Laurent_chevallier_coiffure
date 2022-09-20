@@ -1,0 +1,19 @@
+@mixin text-style {
+    font-family: $font-fam-text;
+    font-size: 1.4vw;
+    color: black;
+    padding: 20px 30px;
+}
+@mixin title-style {
+    font-family: $font-fam-title;
+    font-size: 3vw;
+    font-weight: 200;
+    color: black;
+    padding-top: 20px;
+}
+@mixin big-title-style{
+    font-family: $font-fam-title;
+    font-size: 9vw;
+    font-weight: 400;
+    color: black;
+}

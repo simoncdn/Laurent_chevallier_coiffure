@@ -1,0 +1,68 @@
+.salon h1{
+	@include big-title-style;
+	text-align: center;
+	margin-top: 90px;
+}
+.carousel{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	.slider{
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		margin: $marge;
+		margin-top: 50px;
+		.slides{
+			width: calc(50% * 6);
+			display: flex;
+			animation: diaporama 15s infinite;
+			.slide{
+				float: left;
+				margin-right: 30px;
+				img{
+					width: 100%;
+					border-radius: 5%;
+				}
+			}
+		}
+		.slides:nth-child(1){
+			transform: translateX(15px) ;
+		}
+	}
+}
+
+@keyframes diaporama {
+	0%{
+		transform: translateX(15px);
+		
+	}
+	10%{
+		transform: translateX(15px);
+	}
+	22%{
+		transform: translateX(-16.2%);
+	}
+	32%{
+		transform: translateX(-16.2%);
+	}
+	44%{
+		transform: translateX(-32.9%);
+	}
+	54%{
+		transform: translateX(-32.9%);
+	}
+	66%{
+		transform: translateX(-49.6%);
+	}
+	76%{
+		transform: translateX(-49.6%);
+	}
+	88%{
+		transform: translateX(-66.2%);
+	}
+	100%{
+		transform: translateX(-66.2%);
+	}
+}

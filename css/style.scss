@@ -1,0 +1,33 @@
+@import '_variables';
+@import '_mixins';
+@import '_body';
+@import '_loader';
+
+// 			HEADER			//
+
+@import 'header/_header';
+@import 'header/_box-telephone';
+@import 'header/_left-side';
+
+// 			SECTION 		//
+
+section{
+	width: 100%;
+	height: auto;
+}
+@import 'section/_accueil';
+@import 'section/_carousel';
+@import 'section/_equipe';
+@import 'section/_km';
+@import 'section/_ghd';
+
+// 			FOOTER 			//
+
+@import '_footer';
+
+// 			RESPONSIVE		//
+
+@import 'media/media1270';
+@import 'media/media1024';
+@import 'media/_media768';
+@import 'media/_media425';

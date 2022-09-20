@@ -1,0 +1,34 @@
+.presentation{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+	height: 400px;
+	margin: $marge;
+	margin-top: 90px;
+
+	.presentation-image{
+		width: 49%;
+		height: 100%;
+		overflow: hidden;
+		img{
+			width: 100%;
+			position: relative;
+			top: -20%;
+		}
+	}
+	.text-presentation{
+		background-color: $bgcolor;
+		box-shadow: $border-shdw;
+		width: 49%;
+		height: 100%;
+		color: black;
+		text-decoration: none;
+		h1{
+			@include title-style;
+		}
+		p{
+			@include text-style; 
+		}
+	}
+}

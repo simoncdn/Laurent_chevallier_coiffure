@@ -1,0 +1,187 @@
+@media screen and (max-width: 768px) {
+	$marge: 0px 40px;
+	@mixin text-style {
+        font-size: 2.4vw;
+    }
+    @mixin title-style {
+        font-size: 7vw;
+    }
+	@mixin big-title-style {
+        font-size: 13vw;
+    }
+	header {
+		.box{
+			width: 150px;
+			height: 100px;
+			.container-lignes{
+				top: 30px;
+			}
+		}
+		.menu-left{
+			width: 100%;
+		}
+		.menu-right{
+			display: none;
+		}
+		.container-logo{
+		background-color: rgba(240, 248, 255, 0);
+		box-shadow: none;
+		margin: $marge;
+		height: 250px;
+		}
+		.rdv{
+		display: none;
+		}
+		.box-telephone{
+			display: block;
+		}
+	}
+	section{
+		.reseaux{
+			display: none;
+		}
+		.presentation{
+			margin: $marge;
+			margin-top: 60px;
+			.text-presentation{
+				h1{
+                    @include title-style;
+                }
+                p{
+                    @include text-style;
+                }
+			}
+		}
+		.salon{
+            h1{
+                @include big-title-style;
+            }
+        }
+		.carousel{
+			margin-top: 70px;
+			.slider{
+			margin: $marge;
+			}
+		}
+		.equipe{
+			padding: 10px 0px;
+            .titre{
+                h1{
+                    @include big-title-style;
+                }
+            }
+            .equipe-container{
+				padding: 0px 40px;
+                .laurent, .isabelle, .alizee, .frederique, .nathan {
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    margin: 10px 0px;
+                    width: 100%;
+                    &:hover img{
+                        opacity: 0.5;
+                    }
+                    &:hover .overlay{
+                        opacity: 1;
+                        z-index: 5;
+                    }
+                }
+            }
+            .laurent img, .alizee img, .nathan img{
+                border-radius: 20% 0% 20% 0%;
+            } 
+            .isabelle img, .frederique img{
+                border-radius: 0% 20% 0% 20%;
+            }
+        }
+		.kevin-murphy{
+            .titre{
+                @include big-title-style;
+				margin: $marge;
+            }
+            .item-container{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+                grid-gap: 30px;
+				margin: $marge;
+				margin-top: 70px;
+				.items img{
+					opacity: 1;
+					transition: none;
+					&:hover{
+						transform: none;
+					}
+				}
+            }
+            .km-container{
+				margin: $marge;
+				margin-top: 30px;
+                .km-text-container{
+                    @include text-style;
+                }
+            }
+        }
+		.ghd{
+            h1{
+                @include big-title-style;
+            }
+            .ghd-img-container{
+				margin: $marge;
+				margin-top: 70px;
+				grid-gap: 30px;
+                .ghd-img:nth-child(2){
+                    margin-top: 0px;
+                }
+            }
+            .ghd-text-container{
+                margin: $marge;
+				margin-top: 30px;
+                .ghd-partie1{
+                    p{
+                        @include text-style;
+                    }
+                }
+                .ghd-separation{
+                    height: 1px;
+                    width: 70%;
+                    margin: 20px 0px;
+                }
+                .ghd-partie2{
+                    h1{
+                        @include title-style;
+						padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+	}
+	footer{
+		.footer-container{
+			padding-top: 0px;
+			justify-content: space-between;
+			height: 270px;
+			.contact-container{
+				.footer-icones{
+					display: none;
+				}
+				.adresse{
+					a{
+						font-size: 1.9vw;
+					}
+				}
+			}
+			.horaires{
+				h1{
+
+					font-size: 2.5vw;
+				}
+				p{
+					font-size: 1.9vw;
+				}
+			}
+		}
+		.copyright{
+			display: none;
+		}
+	}
+}

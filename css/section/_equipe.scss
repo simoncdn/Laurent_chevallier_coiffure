@@ -1,0 +1,71 @@
+.equipe{
+    display: block;
+    width: 100%;
+    background-color: $bgcolor;
+	box-shadow: $border-shdw;
+    padding: 10px 50px;
+	left: 0px;
+    position: relative;
+	margin-top: 90px;
+	padding-bottom: 60px;
+	.titre h1{
+		@include big-title-style;
+		position: relative;
+		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 90px;
+	}
+	.equipe-container{
+		position: relative;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-wrap: row;
+		justify-content: center;
+		padding: 0px 50px;
+		margin: 0px 0px;
+		.laurent, .isabelle, .alizee, .frederique, .nathan {
+			display: block;
+			position: relative;
+			margin: 0px 5px;
+			height: 100%;
+			width: 100%;
+			top: 0px;
+			z-index: 5;
+			img{
+				display: block;
+				width: 100%;
+				opacity: 1;
+				transition: 500ms ease-out;
+			}
+			.overlay{
+				opacity: 0;
+				.content{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					font-size: 2rem;
+					color: black;
+					transition: 500ms ease-out;
+					font-family: sans-serif;
+				
+				}
+			}
+			&:hover img{
+				opacity: 0.5;
+			}
+			&:hover .overlay{
+				opacity: 1;
+				z-index: 5;
+			}
+		}
+	}
+}
+
+.laurent img, .alizee img, .nathan img{
+	border-radius: 50% 50% 0% 0%;
+} 
+.isabelle img, .frederique img{
+	border-radius: 0% 0% 50% 50%;
+}
